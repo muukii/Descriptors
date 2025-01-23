@@ -68,5 +68,8 @@ public struct LinearGradientDescriptor: Equatable, Sendable {
     layer.startPoint = startPoint
     layer.endPoint = endPoint
   }
-  
+
+    public func reversed() -> Self {
+        .init(source: self.source, startPoint: self.endPoint, endPoint: self.startPoint)
+    }
 }
